@@ -2,7 +2,7 @@
 Nestle_products={"KitKat":34456432 ,"Nescafe":14106132,"Maggi":9960312 ,"Nido":44506003}
 
 #Create a variable to hold the values of Unilever products (Use a dictionary)
-Unilever_products={"Lipton": 2345600 ,"Breyers":1235891,"HellManns":17241412,"Marmit":11715324}
+Unilever_products={"Lipton": 23456000 ,"Breyers":1235891,"HellManns":17241412,"Marmit":11715324}
 
 #Print each product sold by Unilever and the sales figures / numbers for that product.
 print("\nThe information for unilever products :")
