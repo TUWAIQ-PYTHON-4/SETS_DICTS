@@ -15,15 +15,12 @@ for key2, value2 in Nestle_products.items():
     print(key2, ' : ', value2)
 print("\n____________________________________________\n")
 #Print which of the companies has more products that the other company.
-all_values_Nestle= Nestle_products.values()
-max_value_Nestle = max(all_values_Nestle)
-
-all_values_Unilever= Nestle_products.values()
-max_value_Unilever = max(all_values_Unilever)
+value_Nestle = len(Nestle_products)
+value_Unilever = len(Unilever_products)
 print("Compare number of products:")
-if max_value_Nestle > max_value_Unilever:
+if value_Nestle > value_Unilever:
     print("The company have more prodects is Nestle")
-elif max_value_Nestle < max_value_Unilever:
+elif value_Nestle < value_Unilever:
     print("The company have more prodects is Unilever")
 else:
      print("\n All companies have the same number of products")
@@ -42,9 +39,21 @@ Nestle_set ={"Saudi Arabia", "Oman", "Kuwait", "Egypt", "Jordan", "Sudan"}
 Unilever_set = { "Saudi Arabia", "Kuwait", "Iraq", "Morocco", "Yemen", "United Emirates"}
 print("\n____________________________________________\n")
 # print all the cities Unilever & Nestle sell their products in.
-print("\n All the cities Unilever & Nestle sell their products in :\n",Nestle_set | Unilever_set)
-#print the cities that both Nestle & Unilver sell in common.
-print("\n The cities that both Nestle & Unilver sell in common : \n",Nestle_set & Unilever_set)
-#print the cities Nestle sells in , but Unilver doens't sell in.
-print("\n The cities Nestle sells in , but Unilver doens't sell in: \n",Nestle_set - Unilever_set)
 
+print("\n All the cities Unilever & Nestle sell their products in :\n")
+list1=[]
+for i in Nestle_set | Unilever_set:
+    list1.append(i)
+print(list1)
+#print the cities that both Nestle & Unilver sell in common.
+print("\n The cities that both Nestle & Unilver sell in common : \n")
+list2=[]
+for i in Nestle_set & Unilever_set:
+    list2.append(i)
+print(list2)
+#print the cities Nestle sells in , but Unilver doens't sell in.
+print("\n The cities Nestle sells in , but Unilver doens't sell in: \n")
+list3=[]
+for i in Nestle_set - Unilever_set:
+    list3.append(i)
+print(list3)
