@@ -1,8 +1,4 @@
 # Create a variable to hold the values of Nestle products (use a dicitionary)
-from math import prod
-from optparse import Values
-
-
 nestle_products_dict = {"KitKat" : 34456432 , "Nescafe" : 14106132 , "Maggi" : 9960312 , "Nido" : 44506003 }
 
 # Create a variable to hold the values of Unilever products (Use a dictionary)
