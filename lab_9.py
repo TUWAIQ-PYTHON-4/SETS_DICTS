@@ -21,12 +21,12 @@ else:
     print("There are equal")
 
 #Print the top selling product from Nestle with sales figures.
-top_selling_Nestle = max(Nestle_products.values())
-print(top_selling_Nestle)
+fin_max = max(Nestle_products, key=Nestle_products.get)
+print("Maximum value in Nestle:",fin_max)
 
 #Print the top selling product from Unilever with sales figures.
-top_selling_Unilever = max(Unilever_products.values())
-print(top_selling_Unilever)
+fin_max = max(Unilever_products, key=Unilever_products.get)
+print("Maximum value in Unilever:",fin_max)
 
 #Using Sets & a loop, print all the cities Unilever & Nestle sell their products in.
 Nestle = {"Saudi Arabia", "Oman", "Kuwait", "Egypt", "Jordan", "Sudan"}
@@ -39,19 +39,3 @@ print(Nestle & Unilever)
 
 #Using Sets & a loop, print the cities Nestle sells in , but Unilver doens't sell in.
 print(Nestle - Unilever)
-
-
-"""for products , sales in Nestle_products.items():
-    top_selling_Nestle = max(str(sales))
-    print(top_selling_Nestle)    """
-
-    
-
-
-"""Nestle_products = { "Saudi Arabia", "Oman", "Kuwait", "Egypt", "Jordan", "Sudan"}"""
-
-"""Unilever_products = {"Saudi Arabia", "Kuwait", "Iraq", "Morocco", "Yemen", "United Emirates"}"""
-
-
-
-print(type(Nestle_products))
