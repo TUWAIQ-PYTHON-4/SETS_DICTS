@@ -8,12 +8,15 @@ for key ,value in Nestle_roducts.items():
 
 print("Nestle products are {}".format(len(Nestle_roducts)),"Unilever products are {}".format(len(Unilever_products)))
 
-max_key = max(Nestle_roducts, key=Nestle_roducts.get)
+max_value = max(Nestle_roducts.values())  # maximum value
+max_keys = [k for k, v in Nestle_roducts.items() if v == max_value] 
 
-print("the top selling in Nestle_roducts is",max_key)
-max_key2 = max(Unilever_products, key=Unilever_products.get)
+print("the top selling in Nestle_roducts is",max_value, max_keys)
+max_value = max(Unilever_products.values())  # maximum value
+max_keys = [k for k, v in Unilever_products.items() if v == max_value] 
 
-print("the top selling in Unilever_products is",max_key)
+print("the top selling in Unilever_products is",max_value, max_keys)
+
 
 
 
