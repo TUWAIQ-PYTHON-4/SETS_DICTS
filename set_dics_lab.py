@@ -18,12 +18,14 @@ elif unilever_pro > nestle_pro:
 else:
     print("Nestle and Unilever has the same number of product")
 
+nestle_max = max(dic_Nestle.values())
+max_key =[k for k,v in dic_Nestle.items() if v== nestle_max]
+print("The TOP selling product in Nestle is" ,max_key, nestle_max,"Us dollar")
 
-max_sale1 = max(dic_Nestle,key=dic_Nestle.get)
-print("The TOP selling product in Nestle is :",max_sale1)
+unilever_max = max(dic_Unilever.values())
+max_key2 =[k for k,v in dic_Unilever.items() if v== unilever_max]
+print("The TOP selling product in Unilever is" ,max_key2, unilever_max,"Us dollar")
 
-max_sale2 = max(dic_Unilever,key=dic_Unilever.get)
-print("The TOP selling product in Unilever is :",max_sale2)
 
 citis_Nestle = {"Saudi Arabia", "Oman", "Kuwait", "Egypt", "Jordan", "Sudan"} 
 citis_Unilever ={"Saudi Arabia", "Kuwait", "Iraq", "Morocco", "Yemen", "United Emirates"}
