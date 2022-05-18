@@ -17,10 +17,14 @@ print(Nestle_prodects_sales.items())
 print(Unilever_products_sales.items())
 
 # Print which of the companies has more products that the other company.
-len_Nestle_pro = len(Nestle_prodects_sales.keys())
-len_Unilever_pro = len(Unilever_products_sales.keys())
+N_list_of_keys = list(Nestle_prodects_sales.keys())
+len_Nestle_pro = len(N_list_of_keys)
+
+U_list_of_keys = list(Unilever_products_sales.keys())
+len_Unilever_pro = len(U_list_of_keys)
+
 if len_Unilever_pro == len_Nestle_pro:
-    print('\nBoth of them  has the same amount of prodects')
+    print('\nBoth Nestle and Unilever has the same amount of prodects')
 elif len_Unilever_pro < len_Nestle_pro:
     print(f'\nUnilever has {len_Unilever_pro} prodects, which is more than Nestle')
 else:
@@ -32,20 +36,17 @@ else:
 Print the top selling product from Nestle with sales figures.
 Print the top selling product from Unilever with sales figures.
 '''
-N_list_of_keys = [i for i in Nestle_prodects_sales.keys()]
-N_list_of_val =[int(i) for i in Nestle_prodects_sales.values()]
-
-U_list_of_keys = [i for i in Unilever_products_sales.keys()]
+N_list_of_val = [int(i) for i in Nestle_prodects_sales.values()]
 U_list_of_val = [int(i) for i in Unilever_products_sales.values()]
 
 N_top_seling = max(N_list_of_val)
 U_top_seling = max(U_list_of_val)
 
 x1 =  N_list_of_val.index(N_top_seling)
-print(f'\nThe top selling product from Nestle is {N_list_of_keys[x1]}: {N_top_seling} US')
+print(f'\nThe top selling product from Nestle is {N_list_of_keys[x1]}: {N_top_seling} USD')
 
 x2 = U_list_of_val.index(U_top_seling)
-print(f'The top selling product from Unilever is {U_list_of_keys[x2]}: {U_top_seling} US')
+print(f'The top selling product from Unilever is {U_list_of_keys[x2]}: {U_top_seling} USD')
 
 '''
 Using Sets & a loop, print all the cities Unilever & Nestle sell their products in.
@@ -76,7 +77,7 @@ for i in intersect:
 '''
 Using Sets & a loop, print the cities Nestle sells in , but Unilver doens't sell in.
 '''
-symmetric_difference = Nestle.symmetric_difference(Unilever)
+difference = Nestle.difference(Unilever)
 print('\nNestle ^ Unilever: ')
-for i in symmetric_difference:
+for i in difference:
     print(i)
