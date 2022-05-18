@@ -6,6 +6,12 @@ country_of_unil ={"Saudi Arabia", "Kuwait", "Iraq", "Morocco", "Yemen", "United 
 print(Nestle_pro)
 print(Unilever_pro)
 
+if len (Nestle_pro.keys()) >len (Unilever_pro.keys()):
+    print("NEstle product more than Unilver")
+elif len (Nestle_pro.keys()) >len (Unilever_pro.keys()):
+         print("NEstle product more than Unilver")
+else :
+              print("the product of Nestle and Unilver equal")
 
 print(Nestle_pro.keys())
 print(Unilever_pro.keys())
